@@ -2,16 +2,21 @@ package com.company;
 
 public class WörterGroßbuchstaben {
     public static void main(String[] args) {
-        System.out.println("hola".length());
-        System.out.println("hola".toUpperCase());
-        System.out.println("hola".charAt(1));
-        System.out.println(toUpperCase("hola"));
-
+        System.out.println(toUpperCase("this method is the hardest shit evah"));
     }
 
-    public static String toUpperCase(String words) {
+    public static String toUpperCase(String original) {
+        String str = new String();
+        char c = ' ';
+        for (int i = 0; i < original.length(); i++) {
+            c = original.charAt(i);
+        if (i == 0 || i > 0 && original.charAt(i-1) == ' ') {
+            c = Character.toUpperCase(original.charAt(i));
 
-        return "";
+        }
+        str = str + c ;
+        }
+        return str;
 
 
     }
